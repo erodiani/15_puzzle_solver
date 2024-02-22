@@ -1,0 +1,131 @@
+/*----------------------------------------------------------------
+CONTAINERS
+----------------------------------------------------------------*/
+
+html, body{
+    overflow: hidden;
+    height: 100vh;
+}
+
+body{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    width: 70%;
+}
+
+#container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#tabella_container{
+    width: 70%;
+}
+
+
+
+
+/*----------------------------------------------------------------
+FORMATTAZIONE TABELLA DEL PUZZLE
+----------------------------------------------------------------*/
+
+#tabella_15{
+    border: 2px solid black;
+    border-spacing: 10px;
+    margin-top: 30%;
+    width: 80%;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid black;
+
+}
+
+.cella_dinamica{
+    box-sizing: border-box;
+    width: 20%;
+    height: 20%;
+    text-align: center;
+    align-items: center;
+    font-size: 5vw;
+    border: 2px solid black;
+    border-radius: 20%;
+    background-color: rgb(15, 126, 0);
+    color: white;
+    position: absolute;
+    transition: all .2s ease;
+}
+
+.cella{
+    box-sizing: border-box;
+    width: 20%;
+    height: 20%;
+    text-align: center;
+    align-items: center;
+    font-size: 5vw;
+    border: 2px solid black;
+    border-radius: 20%;
+    margin: 2%;
+}
+
+
+
+
+/*----------------------------------------------------------------
+TASTI PER INTERAZIONE INIZIALE
+----------------------------------------------------------------*/
+
+#bottoni {
+    margin-top: 10%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+button {
+    width: 25%;
+    height: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    font-size: 2vw;
+    font-weight: bold;
+    color: white;
+
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: rgb(0, 182, 121);
+}
+
+button:hover{
+    background-color: rgb(0, 107, 71);
+}
+
+#metriche{
+    width: 25%;
+    height: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#notifica{
+    width: 25%;
+    height: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+}

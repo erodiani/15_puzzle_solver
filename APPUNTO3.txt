@@ -1,0 +1,3 @@
+creare la struttura come mappa che contiene associazione tra posizione nella frontiera e stato
+
+in questo modo si può trovare facilmente lo stato quando si trova una migliore soluzione di uno stato già in frontiera

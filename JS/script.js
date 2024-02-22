@@ -67,9 +67,11 @@ function generaCelleDinamiche(){
     celle.set(16, info_CeSt);
 }
 
+/*
 function sleep(milliseconds){
     return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
+*/
 
 /*----------------------------------------------------------------------
 TOOLS PER SPOSTAMENTO E DISTANZE
@@ -253,6 +255,7 @@ function shuffle(){
     //frontiera.set(gen, {"c" : 0, "h" : euristica, "f" : euristica, "father" : undefined});
 }
 
+/*
 async function forTestPurpose(){
     moveTasselloA_toBlank(12);
     await sleep(200);
@@ -266,6 +269,7 @@ async function forTestPurpose(){
     //frontiera.set(gen, {"c" : 0, "h" : euristica, "f" : euristica, "father" : undefined});
 
 }
+*/
 
 /*-------------------------------------------------------------------
 ALGORITMO DI SEARCH
@@ -343,11 +347,12 @@ function goalCheck(X){
 
 var timeTracker = [];
 
-async function risolvi(){
-
-    const start = Date.now();
-    var notifica = document.getElementById("notifica").innerHTML = "Risolvendo...";
-    await sleep(0.01);
+//async functon risolvi()
+function risolvi(){
+    //await sleep(0.01);
+    //const start = Date.now();
+    //var notifica = document.getElementById("notifica").innerHTML = "Risolvendo...";
+    //await sleep(0.01);
     var count = 0;
     var stato = frontiera.pop();
     var numStati = 1;
@@ -356,10 +361,10 @@ async function risolvi(){
 
     while(!goalCheck(stato.stato)){
         count++;
-        if(count%50000 == 0){
+        /*if(count%50000 == 0){
             await(sleep(0.01));
             document.getElementById("metriche").innerHTML = "funzione -> " + stato.f + "<br>euristica -> " + stato.h + "<br>stati in frontiera -> " + frontiera.size() + "<br>stati in EXL -> " + EXL.size + "<br>iterazione -> " + count;
-        }
+        }*/
 
         var costo = stato.c;
         costo += 1;
@@ -397,9 +402,9 @@ async function risolvi(){
         
 
     }
-    var notifica = document.getElementById("notifica").innerHTML = "Risolto";
-    await sleep(0.01);
-    await costruisciAnimazione(stato);
+    //var notifica = document.getElementById("notifica").innerHTML = "Risolto";
+    //await sleep(0.01);
+    //await costruisciAnimazione(stato);
 
 
     const end = Date.now();
@@ -427,6 +432,7 @@ async function costruisciAnimazione(X){
 }
 
 //funzione per disegnare lo stato ed effettuare la transizione nel caso
+/*
 async function draw(){
     //preleva dimensioni di una cella statica vuota
     //usale per generare quelle nuove
@@ -448,6 +454,7 @@ async function draw(){
     }
     await sleep(200);
 }
+*/
 
 ///DON'T LOOK///
 function moveAnimationFromStateToState(X, Y){

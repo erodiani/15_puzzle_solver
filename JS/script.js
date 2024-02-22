@@ -347,7 +347,7 @@ async function risolvi(){
 
     const start = Date.now();
     var notifica = document.getElementById("notifica").innerHTML = "Risolvendo...";
-    //await sleep(0.01);
+    await sleep(0.01);
     var count = 0;
     var stato = frontiera.pop();
     var numStati = 1;
@@ -357,7 +357,7 @@ async function risolvi(){
     while(!goalCheck(stato.stato)){
         count++;
         if(count%50000 == 0){
-            //await(sleep(0.01));
+            await(sleep(0.01));
             document.getElementById("metriche").innerHTML = "funzione -> " + stato.f + "<br>euristica -> " + stato.h + "<br>stati in frontiera -> " + frontiera.size() + "<br>stati in EXL -> " + EXL.size + "<br>iterazione -> " + count;
         }
 
@@ -398,7 +398,7 @@ async function risolvi(){
 
     }
     var notifica = document.getElementById("notifica").innerHTML = "Risolto";
-    //await sleep(0.01);
+    await sleep(0.01);
     await costruisciAnimazione(stato);
 
 
